@@ -43,7 +43,7 @@ function AddGoal() {
     }
 
     return (
-        <form onSubmit={handleSubmit} className="w-full">
+        <form onSubmit={handleSubmit} className="max-w-[2200px] w-full">
             <div className="flex justify-center items-center border-spacing-1 py-8">
                 <div className='max-w-2xl w-full border-1 border-green-500 rounded-tl-xl rounded-bl-xl py-10 px-10 h-64 '>
                     <Textarea

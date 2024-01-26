@@ -22,10 +22,10 @@ function Chart() {
 
   if (isPending || loading || isExpencePending) return <p>Loading...</p>
 
-  const { balance } = filterByDate(period, data, expenceData)
+  const { balance, expence, income } = filterByDate(period, data, expenceData)
   // const { income, expence } = incomeAndOutcome(data, expenceData)
   const { filteredExpenceData, expenceBalance } = filterByExpenceDate(expenceData, period)
-
+  console.log(data, 'data')
 
 
   function handleActiveButton(value) {
@@ -63,11 +63,11 @@ function Chart() {
 
       <div className="flex items-center">
         <div className="flex justify-center items-center px-20 flex-col">
-          <IncomePieChart income={balance} data={data} />
+          <IncomePieChart income={income} data={data} />
         </div>
 
         <div className="flex justify-center items-center px-20 flex-col">
-          <ExpencePieChart expences={balance} filteredExpenceData={filteredExpenceData} expenceBalance={expenceBalance} />
+          <ExpencePieChart expences={expence} filteredExpenceData={filteredExpenceData} expenceBalance={expenceBalance} />
         </div>
       </div>
     </div >

@@ -9,6 +9,7 @@ import { useFinancialEntry } from "../hooks/useFinancialEntry";
 import { useAuth } from "../context/useAuth";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/react";
+console.log(React)
 
 function IncomePieChart({ income, data }) {
     const [salary, setSalary] = useState(0);
@@ -43,6 +44,9 @@ function IncomePieChart({ income, data }) {
     }
 
     const totalIncome = incomeData.reduce((accum, cur) => accum + cur.value, 0);
+    console.log(totalIncome)
+    console.log(pieData)
+
 
     const handleChange = (e) => {
         e.preventDefault();

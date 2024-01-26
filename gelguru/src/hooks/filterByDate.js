@@ -127,6 +127,6 @@ function calculateBalance(incomeData, expenseData) {
       0
     );
 
-  const balance = totalIncome - totalExpenses; // Adjusted the sign here
+  const balance = totalIncome + totalExpenses;
   return balance;
 }

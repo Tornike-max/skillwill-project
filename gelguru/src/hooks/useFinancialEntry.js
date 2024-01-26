@@ -7,6 +7,7 @@ export function useFinancialEntry() {
   const { authTokens } = useAuth();
   const token = authTokens.access;
   const queryClient = useQueryClient();
+
   const { mutate, isPending } = useMutation({
     mutationFn: (incomeData) => financialEntry(incomeData, token),
     onSuccess: () => {

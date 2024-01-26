@@ -169,7 +169,7 @@ export async function financialEntry(incomeData, token) {
   }
 }
 
-export async function expenceEntry({ expenceData, token }) {
+export async function expenceEntry(expenceData, token) {
   try {
     const response = await fetch(`http://127.0.0.1:8000/api/expense-entries/`, {
       method: "POST",

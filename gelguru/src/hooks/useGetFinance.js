@@ -7,6 +7,7 @@ export function useGetFinance() {
   console.log(authTokens);
 
   const token = authTokens?.access;
+
   const { data, isPending } = useQuery({
     queryKey: ["entryData"],
     queryFn: () => getYourFinances(token),

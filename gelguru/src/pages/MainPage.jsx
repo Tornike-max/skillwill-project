@@ -150,8 +150,8 @@ const MainPage = () => {
       </div> */}
       <Chart />
 
-      <div className="max-w-[1920px] w-full px-14 py-10 flex justify-center items-center flex-col">
-        <div className="w-full flex justify-between">
+      <div className="px-28 py-12 flex justify-center items-center flex-col">
+        <div className="m-auto w-full flex justify-between">
           <p className="font-semibold text-2xl">Financial goals</p>
           <p className="font-semibold text-2xl flex items-center gap-2 text-green-500">
             <p>Add goal</p>
@@ -160,8 +160,10 @@ const MainPage = () => {
             </button>
           </p>
         </div>
-        {addGoalToggle && <AddGoal />}
-        {addGoalToggle && <GoalList />}
+        <div className="m-auto w-full">
+          {addGoalToggle && <AddGoal />}
+          {addGoalToggle && <GoalList />}
+        </div>
       </div>
 
       <div className={styles.footer} style={footerStyle}>
